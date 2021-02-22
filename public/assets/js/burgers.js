@@ -27,7 +27,7 @@ $(function() {
 
     var newBurger = {
       name: $("#brgr").val().trim(),
-      wholeburger: $("[newburger_name=wholeburger]").val().trim()
+      // wholeburger: $("[newburger_name=wholeburger]").val().trim()
     }; 
 
     // Send the POST request.
