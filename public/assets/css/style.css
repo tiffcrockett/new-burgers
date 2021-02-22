@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #5a7028;
+  background-color: #a2af83;
 }
 
 .container { 
@@ -26,14 +26,26 @@ body {
   padding-top: 15px;
 }
 
-.form-group { 
+.create-form { 
   margin-top: -215px;
   margin-left: 235px;
-  width: 354px; 
+}  
+
+#btn { 
+  padding: 10px;
+  background-color: grey;
+  color: white; 
+  border: 0.25px solid gray;
 } 
 
+#brgr { 
+  padding: 3px;
+  width: 325px;
+}
+
+
 #lists {
-  margin-top: 25px;
+  margin-top: 200px;
  } 
 
 .card { 
@@ -71,11 +83,13 @@ li {
 }  
 
 button {
-  padding: 2px;
+  padding:2px;
   background-color: #000; 
   color: #969494;
 }
 
-footer {
-  padding: 15px;
+
+footer { 
+  padding: 15px; 
+  font-size: 13px;
 }

@@ -26,7 +26,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#brgr").val().trim(),
+      newburger_name: $("#brgr").val().trim(),
       // wholeburger: $("[newburger_name=wholeburger]").val().trim()
     }; 
 
