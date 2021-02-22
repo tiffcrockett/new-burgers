@@ -1,5 +1,5 @@
 {
-  "name": "new-burger",
+  "name": "new-burgers",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,9 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffcrockett/new-burgers.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffcrockett/new-burgers/issues"
+  },
+  "homepage": "https://github.com/tiffcrockett/new-burgers#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",

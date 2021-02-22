@@ -4,14 +4,14 @@ $(function() {
     var id = $(this).data("id");
     var newBites = $(this).data("newbites");
 
-    var biteStatus = {
+    var newBiteStatus = {
       wholeburger: newBites 
-    };alert("anything")
+    };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: biteStatus
+      data: newBiteStatus
     }).then(
       function() {
         console.log("changed burger to", newBites);
@@ -21,13 +21,14 @@ $(function() {
     );
   });
 
-  $("#newburgerBtn").on("submit", function(event) {
+  $("create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     var newBurger = {
       name: $("#brgr").val().trim(),
-    }; alert("newburger")
+      wholeburger: $("[newburger_name=wholeburger]").val().trim()
+    }; 
 
     // Send the POST request.
     $.ajax("/api/burgers", {
