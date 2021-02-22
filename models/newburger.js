@@ -25,5 +25,5 @@ var newburger = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (newburgersController.js).
 module.exports = newburger;

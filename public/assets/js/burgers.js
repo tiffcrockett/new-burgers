@@ -5,8 +5,8 @@ $(function() {
     var newBites = $(this).data("newbites");
 
     var biteStatus = {
-      wholeburger: newBites
-    };
+      wholeburger: newBites 
+    };alert("anything")
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
@@ -21,13 +21,13 @@ $(function() {
     );
   });
 
-  $("#newburberBtn").on("submit", function(event) {
+  $("#newburgerBtn").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
     var newBurger = {
       name: $("#brgr").val().trim(),
-    };
+    }; alert("newburger")
 
     // Send the POST request.
     $.ajax("/api/burgers", {

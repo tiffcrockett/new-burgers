@@ -5,9 +5,9 @@
       <form class="create-form"> 
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <button class="btn btn-outline-secondary" type="submit" id="newburgerBtn"><i class="fas fa-hamburger"></i></button>
+            <button class="btn btn-outline-secondary" id="newburgerBtn" type="submit"><i class="fas fa-hamburger"></i></button>
           </div>
-          <input type="text" class="form-control" id="brgr" placeholder="Yummy burgers go here" aria-label="Input text with button" aria-describedby="add a new burger to list">
+          <input type="text" class="form-control" id="brgr" name="newburger" placeholder="Yummy burgers go here" aria-label="Input text with button" aria-describedby="add a new burger to list">
         </div> 
       </form>
     </div>
@@ -20,13 +20,13 @@
             <b> YUMMY BURGERS!</b> 
           </div>
           <div class="card-body">
-            <ol>
+            <ul>
               {{#each burgers}}
               {{#if wholeburger}}
               {{> burgers/newburger-block withbites=false}}
               {{/if}}
               {{/each}}
-            </ol> 
+            </ul> 
           </div>  
         </div> 
       </div>    
@@ -38,13 +38,13 @@
             <b> VIRTUALLY DEVOURED!</b>
           </div> 
           <div class="card-body">
-            <ol>
+            <ul>
               {{#each burgers}}
               {{#unless wholeburger}}
               {{> burgers/newburger-block withbites=true}}
               {{/unless}}
               {{/each}}
-            </ol> 
+            </ul> 
           </div>  
         </div> 
       </div>

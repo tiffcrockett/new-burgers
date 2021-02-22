@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #87bb33;
+  background-color: #5a7028;
 }
 
 .container { 
@@ -30,7 +30,7 @@ body {
   margin-top: -215px;
   margin-left: 235px;
   width: 354px; 
-  background-color: #000;
+  background-color: #98d4f7;
 } 
 
 #lists {
@@ -69,13 +69,12 @@ body {
 li {
   padding: 5px;
   margin: 5px;
-} 
+}  
 
 button {
   padding: 2px;
   background-color: #000; 
   color: #969494;
-  border: bottom;
 }
 
 footer {
