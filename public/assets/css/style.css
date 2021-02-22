@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #a2af83;
+  background-color: #f5f5dc;
 }
 
 .container { 
@@ -33,8 +33,8 @@ body {
 
 #btn { 
   padding: 10px;
-  background-color: grey;
-  color: white; 
+  background-color: rgb(145, 184, 53);
+  color:rgb(43, 43, 43); 
   border: 0.25px solid gray;
 } 
 
