@@ -13,7 +13,6 @@ Eat-Da-Burger lets users input the names of burgers they'd like to eat. Whenever
 
 ## Application-Images
 
-### Note Page
 ![Screenshot of app](https://github.com/tiffcrockett/new-burgers/blob/main/public/assets/img/EDBscrnsht.png?)
 
 
