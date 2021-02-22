@@ -1,38 +1,62 @@
-<h1>Cats!</h1>
+<div class="container">  
+  <img src="./assets/img/edbimg.jpg" alt="" class="bg-img"> 
+        
+    <div class="row"> 
+      <form class="create-form"> 
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-secondary" type="submit" id="newburgerBtn"><i class="fas fa-hamburger"></i></button>
+          </div>
+          <input type="text" class="form-control" id="brgr" placeholder="Yummy burgers go here" aria-label="Input text with button" aria-describedby="add a new burger to list">
+        </div> 
+      </form>
+    </div>
 
-<h2>Cats that are not sleepy!</h2>
+    <div class="row" id='lists'> 
+      <div class="col-6"> 
+        <div class="card" id="addburger"> 
+          <div class="card-header text-danger">
+            <img src="./assets/img/yumburger.png" id="yum" alt="hamburger clipart">
+            <b> YUMMY BURGERS!</b> 
+          </div>
+          <div class="card-body">
+            <ol>
+              {{#each burgers}}
+              {{#if wholeburger}}
+              {{> burgers/newburger-block withbites=false}}
+              {{/if}}
+              {{/each}}
+            </ol> 
+          </div>  
+        </div> 
+      </div>    
 
-<ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      <div class="col-6"> 
+        <div class="card" id="biteburger"> 
+          <div class="card-header text-danger">
+            <img src="./assets/img/burgerbite.png" id="bite" alt="bitten hamburger clipart">
+            <b> VIRTUALLY DEVOURED!</b>
+          </div> 
+          <div class="card-body">
+            <ol>
+              {{#each burgers}}
+              {{#unless wholeburger}}
+              {{> burgers/newburger-block withbites=true}}
+              {{/unless}}
+              {{/each}}
+            </ol> 
+          </div>  
+        </div> 
+      </div>
 
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  {{!-- <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-
-  <button type="submit">Add Cat</button>
-</form>
+    </div> 
+      
+    <footer> 
+      <div class="row text-center text-white">
+        <div class="col">
+          &copy; Eat-Da-Burger 2021
+        </div>  
+      </div>
+    </footer> 
+</div>   
+    
