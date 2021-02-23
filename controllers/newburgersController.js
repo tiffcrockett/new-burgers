@@ -6,17 +6,10 @@ var router = express.Router();
 var newburger = require("../models/newburger.js");
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/", function(req, res) {
-  newburger.all(function(data) {
-    var hbsObject = {
-      burgers: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
-});
 
-router.post("/api/burgers", function(req, res) {
+
+router.post("/api/burgers", function(req, res) { 
+  console.log(req.body)
   newburger.create([
     "newburger_name", "wholeburger"
   ], [
@@ -30,7 +23,7 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  console.log("condition", condition);
+  // console.log("condition", condition);
 
   newburger.update({
     wholeburger: req.body.wholeburger
@@ -54,6 +47,16 @@ router.delete("/api/burgers/:id", function(req, res) {
     } else {
       res.status(200).end();
     }
+  }); 
+}); 
+
+router.get("/", function(req, res) {
+  newburger.all(function(data) {
+    var hbsObject = {
+      burgers: data
+    };
+  
+    res.render("index", hbsObject);
   });
 });
 

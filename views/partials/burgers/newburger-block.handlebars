@@ -3,7 +3,7 @@
 
 	<div id="changeBtns">
 		<button class="change-burger" data-id="{{id}}" data-newbites="{{withbites}}">
-			{{#if wholeburger}}DEVOUR IT!{{else}}EAT IT AGAIN{{/if}}
+			{{#unless wholeburger}}DEVOUR IT!{{else}}EAT IT AGAIN{{/unless}}
 		</button>
 
 		<button class="delete-burger" data-id="{{this.id}}"><i class="far fa-trash-alt"></i></button>
