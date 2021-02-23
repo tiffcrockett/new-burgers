@@ -18,7 +18,7 @@ Eat-Da-Burger lets users input the names of burgers they'd like to eat. Whenever
 
 ## Deployed Link
 
-Deploy the application on Heroku:  https://safe-harbor-26741.herokuapp.com/
+Deploy the application on Heroku:  https://shrouded-beach-35226.herokuapp.com/
 
 ## Contact 
 Feel free to contact me with any comments or questions:
