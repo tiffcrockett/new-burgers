@@ -9,7 +9,6 @@ var newburger = require("../models/newburger.js");
 
 
 router.post("/api/burgers", function(req, res) { 
-  console.log(req.body)
   newburger.create([
     "newburger_name", "wholeburger"
   ], [
