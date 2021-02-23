@@ -1,0 +1,58 @@
+<div class="container">  
+  <img src="./assets/img/edbimg.jpg" alt="close up of hamburger" class="bg-img"> 
+        
+    <div class="create-form">
+      <div class="row"> 
+        <button id="btn" type="submit"><i class="fas fa-hamburger"></i></button>
+        <input type="text" id="brgr" name="newburger_name" placeholder=" Yummy burgers go here"/>
+      </div> 
+    </div>
+
+    <div class="row" id='lists'> 
+      <div class="col-6"> 
+        <div class="card" id="addburger"> 
+          <div class="card-header text-danger">
+            <img src="./assets/img/yumburger.png" id="yum" alt="hamburger clipart fa-2x">
+            <b> YUMMY BURGERS!</b> 
+          </div>
+          <div class="card-body">
+            <ul>
+              {{#each burgers}}
+              {{#unless wholeburger}}
+              {{> burgers/newburger-block withbites=true}}
+              {{/unless}}
+              {{/each}}
+            </ul> 
+          </div>  
+        </div> 
+      </div>    
+
+      <div class="col-6"> 
+        <div class="card" id="biteburger"> 
+          <div class="card-header text-danger">
+            <img src="./assets/img/burgerbite.png" id="bite" alt="bitten hamburger clipart">
+            <b> VIRTUALLY DEVOURED!</b>
+          </div> 
+          <div class="card-body">
+            <ul>
+              {{#each burgers}}
+              {{#if wholeburger}}
+              {{> burgers/newburger-block withbites=false}}
+              {{/if}}
+              {{/each}}
+            </ul> 
+          </div>  
+        </div> 
+      </div>
+
+    </div> 
+      
+    <footer> 
+      <div class="row text-center text-white">
+        <div class="col">
+          &copy; Eat-Da-Burger 2021
+        </div>  
+      </div>
+    </footer> 
+</div>   
+    
